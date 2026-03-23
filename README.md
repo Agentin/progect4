@@ -64,9 +64,9 @@ go.mod
 go.sum
 ```
 ### описание метрик
-http_requests_total	Counter	method, route, status	Общее количество запросов
-http_request_duration_seconds	Histogram	method, route	Длительность запросов в секундах
-http_in_flight_requests	Gauge	(нет)	Текущее число одновременно выполняемых запросов
+http_requests_total (счётчик) – общее количество запросов с метками method, route, status. Используется для расчёта RPS и числа ошибок.
+http_request_duration_seconds (гистограмма) – распределение времени обработки запросов. Позволяет вычислять перцентили (p95, p99) для оценки производительности.
+http_in_flight_requests (датчик) – текущее число одновременно обрабатываемых запросов. Показывает мгновенную нагрузку на сервис.
 ### Пример вывода /metrics 
 
 **работа task**
