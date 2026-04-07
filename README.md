@@ -2,11 +2,11 @@
 ## Выполнил: Студент ЭФМО-02-25 Фомичев Александр Сергеевич
 ### Структура:
 ```
+deploy
+    monitoring
+        prometheus.yml
+        docker-compose.yml
 services
-    deploy
-        monitoring
-            prometheus.yml
-            docker-compose.yml
     auth
         cmd
             auth
